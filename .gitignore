@@ -1,0 +1,7 @@
+vendor/
+phpcs.xml
+phpcs.log
+.phpcs-cache
+.php_cs-cache
+lab.md
+.unisonprofile

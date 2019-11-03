@@ -1,0 +1,6 @@
+bootstrap: "./tests/bootstrap.php"
+suites:
+  amesplash_harvestapi:
+    namespace: Amesplash\HarvestApi
+    psr4_prefix: Amesplash\HarvestApi
+    spec_path: "%paths.config%/tests"
