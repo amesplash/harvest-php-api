@@ -15,6 +15,7 @@ use function array_key_exists;
 use function array_keys;
 use function array_map;
 use function array_search;
+use function array_slice;
 use function array_values;
 use function count;
 use function end;
@@ -167,6 +168,14 @@ class ArrayCollection extends Immutable implements Collection
         $clone->set(array_filter($this->elements, $p, ARRAY_FILTER_USE_BOTH));
 
         return $clone;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function slice(int $offset, ?int $length = null) : array
+    {
+        return array_slice($this->elements, $offset, $length, true);
     }
 
     /**
